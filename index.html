@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>task</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="form.png">
+        </div>
+        <div class="main">
+            <h5>REGISTRETION STUDENT FORM</h5>
+            <form id="register-form">
+                <div class="section">
+                    <input id="fname" type="text" name="firstname" placeholder="Firstname" required />
+                    <input id="lname" type="text" name="lastname" placeholder="Lastname" required />
+                </div>
+                <div class="sectionOne">
+                    <input id="address" type="text" placeholder="Address" name="address" required>
+                </div>
+                <div class="gender">
+                    <label>Gender :</label>
+                    <input type="radio" value="Male" name="gender" checked> Male
+                    <input type="radio" value="Female" name="gender"> Female
+                    <input type="radio" value="Other" name="gender"> Other
+                </div>
+                <div class="sectionTow">
+                    <select id="countrySelect" size="1" onchange="makeSubmenu(this.value)">
+                        <option value="" disabled selected> State</option>
+                        <option>Jordan</option>
+                        <option>Saudi Arabia</option>
+                        <option>Turkey</option>
+                    </select>
+                    <select id="citySelect" size="1">
+                        <option value="" disabled selected> City</option>
+                        <option></option>
+                    </select>
+                </div>
+                <div class="sectionOne">
+
+                    <input id="code" type="text" name="code" placeholder="pin Code" />
+                    <input id="course" type="text" name="Course" placeholder="Course" />
+                    <input id="email" type="text" placeholder="Email ID" name="email" required>
+                </div>
+                <div class="footer">
+                    <button class="reset" onclick="reset()">Reset All</button>
+                    <button class="submit" onclick="store()">SUBMIT FORM</button>
+                </div>
+            </form>
+
+            <div class="main">
+                <h5>LOGIN FORM</h5>
+                <form id="login-form" class="sectionOne">
+                    <input id="name" type="text" placeholder="Enter Username" value="" />
+                    <input id="password" type="password" placeholder="Enter Password" value="" />
+                    <input id="login_btn" class="submit" type="submit" value="Login" onClick="login()" />
+                </form>
+
+            </div>
+          
+        </div>
+    </div>
+
+</body>
+
+</html>
